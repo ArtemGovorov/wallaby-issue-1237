@@ -1,0 +1,16 @@
+{
+  "name": "wallaby-issue-1237",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "20.0.4",
+    "joi": "10.6.0"
+  }
+}
