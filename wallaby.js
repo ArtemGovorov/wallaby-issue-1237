@@ -22,6 +22,10 @@ module.exports = wallaby => {
 
         testFramework: 'jest',
 
+        hints: {
+            ignoreCoverage: /ignore coverage/
+        },
+
         setup: w => {
             process.env.NODE_ENV = 'test';
             const jestConfig = require('./jest.config');
