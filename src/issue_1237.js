@@ -3,7 +3,7 @@ const Joi = require('joi');
 const schema = Joi.array().items(Joi.func().min(2));
 
 /* ignore coverage */
-const fn = () => 1||'fn';
+const fn = () => 'fn';
 
 const obj = [fn];
 
