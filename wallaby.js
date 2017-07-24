@@ -8,6 +8,10 @@ module.exports = wallaby => {
             'src/**/*.js',
             'jest.config.js',
             'src/**/*.snap',
+            {
+                pattern: 'src/**/__sandbox__/**/*',
+                instrument: false,
+            },
             '!src/**/*.test.js',
         ],
 
