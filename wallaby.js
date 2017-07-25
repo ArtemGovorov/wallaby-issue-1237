@@ -8,6 +8,8 @@ module.exports = wallaby => {
             {
                 pattern: 'src/**/__sandbox__/**/*',
                 instrument: false,
+                load: true,
+                ignore: false,
             },
             'src/**/*.js',
             'jest.config.js',
@@ -15,9 +17,11 @@ module.exports = wallaby => {
             '!src/**/*.test.js',
         ],
 
-        tests: [
-            'src/**/*.test.js',
-        ],
+        tests: ['src/**/*.test.js'],
+
+        compilers: {
+            '**/*.js': wallaby.compilers.babel(),
+        },
 
         env: {
             type: 'node',
