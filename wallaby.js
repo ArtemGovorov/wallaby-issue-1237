@@ -5,13 +5,13 @@
 module.exports = wallaby => {
     return {
         files: [
-            'src/**/*.js',
-            'jest.config.js',
-            'src/**/*.snap',
             {
                 pattern: 'src/**/__sandbox__/**/*',
                 instrument: false,
             },
+            'src/**/*.js',
+            'jest.config.js',
+            'src/**/*.snap',
             '!src/**/*.test.js',
         ],
 
