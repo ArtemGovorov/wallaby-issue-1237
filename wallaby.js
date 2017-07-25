@@ -6,11 +6,9 @@ module.exports = wallaby => {
     return {
         files: [
             {
-                pattern: 'src/**/__sandbox__/**/*',
-                instrument: false,
-                load: true,
-                ignore: false,
+                pattern: 'src/**/__sandbox__/**/*', instrument: false
             },
+            '.babelrc',
             'src/**/*.js',
             'jest.config.js',
             'src/**/*.snap',
@@ -33,6 +31,7 @@ module.exports = wallaby => {
         setup: w => {
             process.env.NODE_ENV = 'test';
             const jestConfig = require('./jest.config');
+            jestConfig.transform = {"__sandbox__.+\\.jsx?$": "babel-jest"};
             w.testFramework.configure(jestConfig);
         },
     };
